@@ -1,5 +1,6 @@
 var carr = document.getElementById("imagen");
 var contar = 0;
+console.log(contar);
 function izquierda(){
     bandera = 0;
     //carr.src="src/sejuani.jpg";
@@ -16,13 +17,16 @@ function derecha(){
 function contador(){
     if (bandera){
         contar++;
-        console.log(contar);
+        reasignar();
         eleccion();
+        console.log(contar);
         
     }else{
         contar--;
-        console.log(contar);
+        reasignar();
         eleccion();
+        console.log(contar);        
+        
     }
 
 }
@@ -31,8 +35,6 @@ function reasignar(){
         contar=5;
     }else if (contar>=6){
         contar=0;
-    }else{
-        console.log("pero que putas paso?!")
     }
 
 }
@@ -47,7 +49,15 @@ function eleccion(){
         case 2:
             carr.src="src/sejuani.jpg";
             break;
-        
+        case 3:
+            carr.src="src/azir.jpg";
+            break;
+        case 4:
+            carr.src="src/shy.jpg";
+            break;
+        case 5:
+            carr.src="src/amumu.jpg";
+            break;
     }
 }
 
